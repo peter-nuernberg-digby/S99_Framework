@@ -10,9 +10,9 @@ abstract class AbstractP16 extends Pxx[(Int, List[Symbol]), List[Symbol]] {
       * scala> drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
       * res0: List[Symbol] = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)}}}
       */
-    def drop[A](n: Int, l: List[A]): List[A]
+    def drop[A](n: Int, l: List[A]): List[A] = ???
 
-    def input = (3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    def output = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
+    override def input = (3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+    override def output = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
     def op = (args: (Int, List[Symbol])) => drop(args._1, args._2)
 }

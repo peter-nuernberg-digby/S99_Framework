@@ -10,9 +10,9 @@ abstract class AbstractP02 extends Pxx[List[Int], Int] {
       * scala> penultimate(List(1, 1, 2, 3, 5, 8))
       * res0: Int = 5}}}
       */
-    def penultimate[A](l: List[A]): A
+    def penultimate[A](l: List[A]): A = ???
 
-    def input = List(1, 1, 2, 3, 5, 8)
-    def output = 5
+    override def input = List(1, 1, 2, 3, 5, 8)
+    override def output = 5
     def op = penultimate
 }

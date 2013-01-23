@@ -12,9 +12,9 @@ abstract class AbstractP11 extends Pxx[List[Symbol], List[Any]] {
       * scala> encodeModified(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
       * res0: List[Any] = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))}}}
       */
-    def encodeModified[A](l: List[A]): List[Any]
+    def encodeModified[A](l: List[A]): List[Any] = ???
 
-    def input = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
-    def output = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))
+    override def input = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    override def output = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))
     def op = encodeModified
 }

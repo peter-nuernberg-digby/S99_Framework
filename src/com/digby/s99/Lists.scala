@@ -4,18 +4,6 @@ import lists._
 
 object Lists {
 
-    /** P19 (**) Rotate a list N places to the left.
-      *
-      * @example {{{
-      * scala> rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-      * res0: List[Symbol] = List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c)}}}
-      *
-      * @example {{{
-      * scala> rotate(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-      * res1: List[Symbol] = List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i)}}}
-      */
-    def rotate[A](n: Int, l: List[A]): List[A] = ???
-
     /** P20 (*) Remove the Kth element from a list.
       *
       * Return the list and the removed element in a Tuple. Elements are numbered from 0.

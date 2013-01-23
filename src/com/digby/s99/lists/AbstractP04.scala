@@ -10,9 +10,9 @@ abstract class AbstractP04 extends Pxx[List[Int], Int] {
       * scala> length(List(1, 1, 2, 3, 5, 8))
       * res0: Int = 6}}}
       */
-    def length[A](l: List[A]): Int
+    def length[A](l: List[A]): Int = ???
 
-    def input = List(1, 1, 2, 3, 5, 8)
-    def output = 6
+    override def input = List(1, 1, 2, 3, 5, 8)
+    override def output = 6
     def op = length
 }

@@ -12,9 +12,9 @@ abstract class AbstractP03 extends Pxx[(Int, List[Int]), Int] {
       * scala> nth(2, List(1, 1, 2, 3, 5, 8))
       * res0: Int = 2}}}
       */
-    def nth[A](index: Int, l: List[A]): A
+    def nth[A](index: Int, l: List[A]): A = ???
 
-    def input = (2, List(1, 1, 2, 3, 5, 8))
-    def output = 2
+    override def input = (2, List(1, 1, 2, 3, 5, 8))
+    override def output = 2
     def op = (args: (Int, List[Int])) => nth(args._1, args._2)
 }

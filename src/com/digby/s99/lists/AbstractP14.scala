@@ -10,9 +10,9 @@ abstract class AbstractP14 extends Pxx[List[Symbol], List[Symbol]] {
       * scala> duplicate(List('a, 'b, 'c, 'c, 'd))
       * res0: List[Symbol] = List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)}}}
       */
-    def duplicate[A](l: List[A]): List[A]
+    def duplicate[A](l: List[A]): List[A] = ???
 
-    def input = List('a, 'b, 'c, 'c, 'd)
-    def output = List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
+    override def input = List('a, 'b, 'c, 'c, 'd)
+    override def output = List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd)
     def op = duplicate
 }

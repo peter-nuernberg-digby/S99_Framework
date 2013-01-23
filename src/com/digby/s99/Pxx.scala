@@ -2,12 +2,18 @@ package com.digby.s99
 
 abstract class Pxx[I, O] {
 
-    def input: I
-    def output: O
+    def input: I = ???
+    def output: O = ???
     def op: (I) => O
 
-    def test(curr: Results = new Results()): Results = {
-        confirm(op(input), output, curr)
+    def pairs: List[(I, O)] = List((input, output))
+    
+    def input(run: Int) = pairs(run)._1
+    def output(run: Int) = pairs(run)._2
+    
+    def test(acc: Results = new Results(), run: Int = 0): Results = {
+        if (run >= pairs.size) acc
+        else test(confirm(op(input(run)), output(run), acc), run + 1)
     }
 
     def main(args: Array[String]): Unit = test()

@@ -13,9 +13,9 @@ abstract class AbstractP08 extends Pxx[List[Symbol], List[Symbol]] {
       * scala> compress(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
       * res0: List[Symbol] = List('a, 'b, 'c, 'a, 'd, 'e)}}}
       */
-    def compress[A](l: List[A]): List[A]
+    def compress[A](l: List[A]): List[A] = ???
 
-    def input = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
-    def output = List('a, 'b, 'c, 'a, 'd, 'e)
+    override def input = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    override def output = List('a, 'b, 'c, 'a, 'd, 'e)
     def op = compress
 }

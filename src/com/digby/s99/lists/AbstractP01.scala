@@ -10,9 +10,9 @@ abstract class AbstractP01 extends Pxx[List[Int], Int] {
       * scala> last(List(1, 1, 2, 3, 5, 8))
       * res0: Int = 8}}}
       */
-    def last[A](l: List[A]): A
+    def last[A](l: List[A]): A = ???
     
-    def input = List(1, 1, 2, 3, 5, 8)
-    def output = 8
+    override def input = List(1, 1, 2, 3, 5, 8)
+    override def output = 8
     def op = last
 }

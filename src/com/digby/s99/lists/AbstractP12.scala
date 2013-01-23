@@ -12,9 +12,9 @@ abstract class AbstractP12 extends Pxx[List[(Int, Symbol)], List[Symbol]] {
       * scala> decode(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e)))
       * res0: List[Symbol] = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)}}}
       */
-    def decode[A](l: List[(Int, A)]): List[A]
+    def decode[A](l: List[(Int, A)]): List[A] = ???
 
-    def input = List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))
-    def output = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    override def input = List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))
+    override def output = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
     def op = decode
 }

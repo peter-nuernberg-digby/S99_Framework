@@ -10,9 +10,9 @@ abstract class AbstractP15 extends Pxx[(Int, List[Symbol]), List[Symbol]] {
       * scala> duplicateN(3, List('a, 'b, 'c, 'c, 'd))
       * res0: List[Symbol] = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)}}}
       */
-    def duplicateN[A](n: Int, l: List[A]): List[A]
+    def duplicateN[A](n: Int, l: List[A]): List[A] = ???
 
-    def input = (3, List('a, 'b, 'c, 'c, 'd))
-    def output = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
+    override def input = (3, List('a, 'b, 'c, 'c, 'd))
+    override def output = List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)
     def op = (args: (Int, List[Symbol])) => duplicateN(args._1, args._2)
 }
