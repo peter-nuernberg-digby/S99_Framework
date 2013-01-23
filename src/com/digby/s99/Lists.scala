@@ -4,32 +4,6 @@ import lists._
 
 object Lists {
 
-    /** P20 (*) Remove the Kth element from a list.
-      *
-      * Return the list and the removed element in a Tuple. Elements are numbered from 0.
-      *
-      * @example {{{
-      * scala> removeAt(1, List('a, 'b, 'c, 'd))
-      * res0: (List[Symbol], Symbol) = (List('a, 'c, 'd),'b)}}}
-      */
-    def removeAt[A](k: Int, l: List[A]): (List[A], A) = ???
-
-    /** P21 (*) Insert an element at a given position into a list.
-      *
-      * @example {{{
-      * scala> insertAt('new, 1, List('a, 'b, 'c, 'd))
-      * res0: List[Symbol] = List('a, 'new, 'b, 'c, 'd)}}}
-      */
-    def insertAt[A](e: A, k: Int, l: List[A]): List[A] = ???
-
-    /** P22 (*) Create a list containing all integers within a given range.
-      *
-      * @example {{{
-      * scala> range(4, 9)
-      * res0: List[Int] = List(4, 5, 6, 7, 8, 9)}
-      */
-    def range(l: Int, h: Int): List[Int] = ???
-
     /** P23 (**) Extract a given number of randomly selected elements from a list.
       *
       * @example {{{

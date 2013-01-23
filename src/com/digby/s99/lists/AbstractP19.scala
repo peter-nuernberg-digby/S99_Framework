@@ -19,4 +19,5 @@ abstract class AbstractP19 extends Pxx[(Int, List[Symbol]), List[Symbol]] {
     override def pairs = List( //
             ((3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)), List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c)), //
             ((-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)), List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i)))
+    def op = (args: (Int, List[Symbol])) => rotate(args._1, args._2)
 }
