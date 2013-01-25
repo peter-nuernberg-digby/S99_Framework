@@ -4,16 +4,6 @@ import lists._
 
 object Lists {
 
-    /** P23 (**) Extract a given number of randomly selected elements from a list.
-      *
-      * @example {{{
-      * scala> randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h))
-      * res0: List[Symbol] = List('e, 'd, 'a)}}}
-      *
-      * Hint: Use the solution to problem P20
-      */
-    def randomSelect[A](k: Int, l: List[A]): List[A] = ???
-
     /** P24 (*) Lotto: Draw N different random numbers from the set 1..M.
       *
       * @example {{{

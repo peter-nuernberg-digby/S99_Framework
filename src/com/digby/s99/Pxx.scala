@@ -11,19 +11,21 @@ abstract class Pxx[I, O] {
     def input(run: Int) = pairs(run)._1
     def output(run: Int) = pairs(run)._2
     
-    def test(acc: Results = new Results(), run: Int = 0): Results = {
+    def comparison: (O, O) => Boolean = simpleEquals
+    
+    def test(acc: Results = new Results(), run: Int = 0, f: (O, O) => Boolean = simpleEquals): Results = {
         if (run >= pairs.size) acc
         else test(confirm(op(input(run)), output(run), acc), run + 1)
     }
 
     def main(args: Array[String]): Unit = test()
 
-    def confirm[T](a: => T, e: => T, curr: Results = new Results()): Results = {
+    def confirm(a: => O, e: => O, curr: Results = new Results()): Results = {
         val name = this.getClass().getSimpleName().replaceAll("\\$", "")
         try {
             val actual = a
             val expected = e
-            if (expected == actual) {
+            if (comparison(expected, actual)) {
                 println(s"$name passed")
                 curr.pass(name)
             } else {
@@ -41,6 +43,8 @@ abstract class Pxx[I, O] {
             }
         }
     }
+    
+    def simpleEquals[T](a: T, b: T): Boolean = (a == b)
 }
 
 class Results(passed: List[String] = Nil, failed: List[String] = Nil, skipped: List[String] = Nil, missed: List[String] = Nil) {

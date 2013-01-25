@@ -23,6 +23,10 @@ object Lists {
         results = P15.test(results)
         results = P16.test(results)
         results = P17.test(results)
+        results = P18.test(results)
+        results = P19.test(results)
+        results = P20.test(results)
+        results = P21.test(results)
         println(results)
     }
 
