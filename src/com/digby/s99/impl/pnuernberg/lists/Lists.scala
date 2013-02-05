@@ -27,6 +27,15 @@ object Lists {
         results = P19.test(results)
         results = P20.test(results)
         results = P21.test(results)
+        results = P22.test(results)
+        results = P23.test(results)
+        results = P24.test(results)
+        results = P25.test(results)
+        results = P26.test(results)
+        results = P27a.test(results)
+        results = P27b.test(results)
+        results = P28a.test(results)
+        results = P28b.test(results)
         println(results)
     }
 
